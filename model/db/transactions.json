@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "category": "продукти",
+    "operationType": "витрати",
+    "amount": 50,
+    "datetime": "08.11.2021",
+    "description": "хліб"
+  },
+  {
+    "id": 2,
+    "category": "продукти",
+    "operationType": "витрати",
+    "amount": 50,
+    "datetime": "08.11.2021",
+    "description": "хліб"
+  },
+  {
+    "id": 3,
+    "category": "продукти",
+    "operationType": "витрати",
+    "amount": 50,
+    "datetime": "08.11.2021",
+    "description": "хліб"
+  }
+]
