@@ -9,11 +9,7 @@ const transactions = require('../../models/transactions');
 // };
 
 const listTransactions = async () => {
-  try {
-    return await transactions.find();
-  } catch (err) {
-    throw err;
-  }
+  return await transactions.find();
 };
 
 module.exports = listTransactions;
