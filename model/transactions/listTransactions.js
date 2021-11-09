@@ -1,6 +1,6 @@
 // const fs = require('fs/promises');
 
-const transactions = require('../../models/transactions');
+const { Transactions } = require('../../models/transactions');
 
 // const filePath = require("./filePath");
 
@@ -9,7 +9,7 @@ const transactions = require('../../models/transactions');
 // };
 
 const listTransactions = async () => {
-  return await transactions.find();
+  return await Transactions.find();
 };
 
 module.exports = listTransactions;
