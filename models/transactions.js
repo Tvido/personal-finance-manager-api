@@ -1,5 +1,5 @@
-const { Schema, model } = require("mongoose");
-const Joi = require("joi");
+const { Schema, model } = require('mongoose');
+const Joi = require('joi');
 
 const transactionsSchema = Schema(
   {
@@ -18,8 +18,7 @@ const transactionsSchema = Schema(
       default: null,
     },
     datetime: {
-      type: String,
-      default: null,
+      type: Date,
     },
     description: {
       type: String,
@@ -27,7 +26,7 @@ const transactionsSchema = Schema(
       minlength: 2,
     },
   },
-  { versionKey: false, timestamps: true }
+  { versionKey: false, timestamps: true },
 );
 
 const joiSchema = Joi.object({
@@ -38,6 +37,6 @@ const joiSchema = Joi.object({
   description: Joi.string().min(2).required(),
 });
 
-const Transactions = model("transactions", transactionsSchema);
+const Transactions = model('transactions', transactionsSchema);
 
 module.exports = { Transactions, joiSchema };
