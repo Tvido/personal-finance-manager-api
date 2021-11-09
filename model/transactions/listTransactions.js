@@ -1,12 +1,16 @@
-const fs = require("fs/promises");
+// const fs = require('fs/promises');
 
-const filePath = require("./filePath");
+const transactions = require('../../models/transactions');
+
+// const filePath = require("./filePath");
+
+// const getWallets = async (id) => {
+//   return await Wallet.find({ user: id });
+// };
 
 const listTransactions = async () => {
   try {
-    const data = await fs.readFile(filePath);
-    const transactions = JSON.parse(data);
-    return transactions;
+    return await transactions.find();
   } catch (err) {
     throw err;
   }
