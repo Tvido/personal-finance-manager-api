@@ -1,18 +1,18 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { joiSchema } = require("../../models/transactions");
-const validation = require("../../middlewares/validation");
+const { joiSchema } = require('../../models/transactions');
+const validation = require('../../middlewares/validation');
 
-const ctrl = require("../../controllers/transactions");
+const ctrl = require('../../controllers/transactions');
 
-router.get("/", ctrl.listTransactions);
+router.get('/', ctrl.listTransactions);
 
-router.get("/:transactionId", ctrl.getById);
+router.get('/:transactionId', ctrl.getById);
 
-router.post("/", validation(joiSchema), ctrl.add);
+router.post('/', validation(joiSchema), ctrl.add);
 
-router.put("/:transactionId", ctrl.update);
+router.put('/:transactionId', ctrl.update);
 
-router.delete("/:transactionId", ctrl.remove);
+router.delete('/:transactionId', ctrl.remove);
 
 module.exports = router;

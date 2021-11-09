@@ -1,6 +1,6 @@
-const transactionsOperations = require("../../model/transactions");
+const transactionsOperations = require('../../model/transactions');
 
-const { joiTransactionSchema } = require("../../validation");
+const { joiTransactionSchema } = require('../../validation');
 
 const update = async (req, res, next) => {
   try {
@@ -14,10 +14,10 @@ const update = async (req, res, next) => {
     const { transactionId } = req.params;
     const updateTransaction = await transactionsOperations.update(
       transactionId,
-      req.body
+      req.body,
     );
     if (!req.body) {
-      return res.status(404).json({ message: "missing fields" });
+      return res.status(404).json({ message: 'missing fields' });
     }
     res.json({ updateTransaction });
   } catch (error) {
